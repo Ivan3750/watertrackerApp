@@ -1,0 +1,41 @@
+<svg width="162.962967" height="162.963379" viewBox="0 0 162.963 162.963" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_1_317_dd" x="0.000000" y="0.000000" width="162.962967" height="162.963379" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="8.14815" dy="12.2222"/>
+			<feGaussianBlur stdDeviation="10.1852"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0.36471 0 0 0 0 0.8 0 0 0 0 0.98824 0 0 0 0.16 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+		<clipPath id="clip1_318">
+			<rect id="simple-time-tracker-svgrepo-com 1" rx="-0.500000" width="69.000000" height="69.000000" transform="translate(38.907410 34.944824)" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip1_317">
+			<rect id="Frame 33323" rx="30.046297" width="100.833336" height="100.833336" transform="translate(22.916670 18.842756)" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<linearGradient x1="22.407425" y1="18.333488" x2="102.870415" y2="120.185371" id="paint_linear_1_317_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#F6B203"/>
+			<stop offset="1.000000" stop-color="#FF5F00"/>
+			<stop offset="1.000000" stop-color="#FB8101"/>
+		</linearGradient>
+	</defs>
+	<g filter="url(#filter_1_317_dd)">
+		<rect id="Frame 33323" rx="30.046297" width="100.833336" height="100.833336" transform="translate(22.916670 18.842756)" fill="url(#paint_linear_1_317_0)" fill-opacity="1.000000"/>
+		<g clip-path="url(#clip1_317)">
+			<rect id="simple-time-tracker-svgrepo-com 1" rx="-0.500000" width="69.000000" height="69.000000" transform="translate(38.907410 34.944824)" fill="#FFFFFF" fill-opacity="0"/>
+			<g clip-path="url(#clip1_318)">
+				<path id="Vector" d="M83.21 66.11L69.7 79.61L63.33 73.25" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+				<path id="Vector" d="M73.48 96.28C60.42 96.28 49.84 85.69 49.84 72.63C49.84 59.57 60.42 48.98 73.48 48.98C86.54 48.98 97.13 59.57 97.13 72.63C97.13 85.69 86.54 96.28 73.48 96.28Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
+				<path id="Vector" d="M73.67 90.8C63.6 90.8 55.44 82.63 55.44 72.57C55.44 62.5 63.6 54.34 73.67 54.34C83.74 54.34 91.9 62.5 91.9 72.57C91.9 82.63 83.74 90.8 73.67 90.8Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
+				<path id="Vector" d="M99.87 52.87L87.71 42.6L84.13 46.85L96.19 57.03L99.87 52.87Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
+				<path id="Vector" d="M46.93 52.87L59.09 42.6L62.67 46.85L50.62 57.03L46.93 52.87Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
+			</g>
+		</g>
+	</g>
+</svg>

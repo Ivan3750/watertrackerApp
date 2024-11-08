@@ -1,0 +1,32 @@
+<svg width="162.963013" height="162.963379" viewBox="0 0 162.963 162.963" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_1_335_dd" x="0.000000" y="0.000000" width="162.963013" height="162.963379" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="8.14815" dy="12.2222"/>
+			<feGaussianBlur stdDeviation="10.1852"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0.36471 0 0 0 0 0.8 0 0 0 0 0.98824 0 0 0 0.2 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+		<clipPath id="clip1_336">
+			<rect id="schedule-svgrepo-com 1" rx="-0.500000" width="59.000000" height="59.000000" transform="translate(43.759216 39.944824)" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip1_335">
+			<rect id="Frame 33322" rx="30.046297" width="100.833336" height="100.833336" transform="translate(22.916670 18.842756)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g filter="url(#filter_1_335_dd)">
+		<rect id="Frame 33322" rx="30.046297" width="100.833336" height="100.833336" transform="translate(22.916670 18.842756)" fill="#FFBA00" fill-opacity="1.000000"/>
+		<g clip-path="url(#clip1_335)">
+			<rect id="schedule-svgrepo-com 1" rx="-0.500000" width="59.000000" height="59.000000" transform="translate(43.759216 39.944824)" fill="#FFFFFF" fill-opacity="0"/>
+			<g clip-path="url(#clip1_336)">
+				<path id="Vector" d="M65.75 68.5C65.75 67.98 66.17 67.56 66.69 67.56L67.63 67.56C68.66 67.56 69.5 68.4 69.5 69.44L69.5 81.63C69.5 82.14 69.08 82.56 68.57 82.56C68.05 82.56 67.63 82.14 67.63 81.63L67.63 69.44L66.69 69.44C66.17 69.44 65.75 69.02 65.75 68.5ZM76.07 69.44L77 69.44L77 81.63C77 82.14 77.42 82.56 77.94 82.56C78.46 82.56 78.88 82.14 78.88 81.63L78.88 69.44C78.88 68.4 78.04 67.56 77 67.56L76.07 67.56C75.55 67.56 75.13 67.98 75.13 68.5C75.13 69.02 75.55 69.44 76.07 69.44ZM99.5 54.44L99.5 90.06C99.5 93.17 96.99 95.69 93.88 95.69L52.63 95.69C49.52 95.69 47 93.17 47 90.06L47 54.44C47 51.33 49.52 48.81 52.63 48.81L54.5 48.81L54.5 46.94C54.5 44.87 56.18 43.19 58.25 43.19C60.33 43.19 62 44.87 62 46.94L62 48.81L84.5 48.81L84.5 46.94C84.5 44.87 86.18 43.19 88.25 43.19C90.33 43.19 92 44.87 92 46.94L92 48.81L93.88 48.81C96.99 48.81 99.5 51.33 99.5 54.44ZM86.38 52.56C86.38 53.6 87.22 54.44 88.25 54.44C89.29 54.44 90.13 53.6 90.13 52.56L90.13 46.94C90.13 45.91 89.29 45.06 88.25 45.06C87.22 45.06 86.38 45.91 86.38 46.94L86.38 52.56ZM56.38 52.56C56.38 53.6 57.22 54.44 58.25 54.44C59.29 54.44 60.13 53.6 60.13 52.56L60.13 46.94C60.13 45.91 59.29 45.06 58.25 45.06C57.22 45.06 56.38 45.91 56.38 46.94L56.38 52.56ZM97.58 90.52C96.59 91.39 95.3 91.94 93.88 91.94L52.63 91.94C51.2 91.94 49.92 91.39 48.92 90.52C49.15 92.37 50.72 93.81 52.63 93.81L93.88 93.81C95.79 93.81 97.36 92.37 97.58 90.52ZM97.63 61.94L48.88 61.94L48.88 86.31C48.88 88.38 50.56 90.06 52.63 90.06L93.88 90.06C95.95 90.06 97.63 88.38 97.63 86.31L97.63 61.94ZM97.63 54.44C97.63 52.37 95.95 50.69 93.88 50.69L92 50.69L92 52.56C92 54.64 90.33 56.31 88.25 56.31C86.18 56.31 84.5 54.64 84.5 52.56L84.5 50.69L62 50.69L62 52.56C62 54.64 60.33 56.31 58.25 56.31C56.18 56.31 54.5 54.64 54.5 52.56L54.5 50.69L52.63 50.69C50.56 50.69 48.88 52.37 48.88 54.44L48.88 60.06L97.63 60.06L97.63 54.44Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+			</g>
+		</g>
+	</g>
+</svg>

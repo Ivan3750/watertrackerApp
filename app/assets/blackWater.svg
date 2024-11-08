@@ -1,0 +1,41 @@
+<svg width="162.963013" height="162.963379" viewBox="0 0 162.963 162.963" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_1_340_dd" x="0.000000" y="0.000000" width="162.963013" height="162.963379" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="8.14815" dy="12.2222"/>
+			<feGaussianBlur stdDeviation="10.1852"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0.36471 0 0 0 0 0.8 0 0 0 0 0.98824 0 0 0 0.2 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+		<clipPath id="clip1_341">
+			<rect id="glass-fill-water-drink-bottle-cup-mug-svgrepo-com 1" rx="-0.500000" width="69.000000" height="69.000000" transform="translate(38.685242 34.944824)" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip1_340">
+			<rect id="Frame 33322" rx="30.046297" width="100.833336" height="100.833336" transform="translate(22.916670 18.842756)" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<linearGradient x1="130.777802" y1="111.655891" x2="15.074104" y2="32.632896" id="paint_linear_1_340_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#000000"/>
+			<stop offset="1.000000" stop-color="#706F6F"/>
+		</linearGradient>
+	</defs>
+	<g filter="url(#filter_1_340_dd)">
+		<rect id="Frame 33322" rx="30.046297" width="100.833336" height="100.833336" transform="translate(22.916670 18.842756)" fill="url(#paint_linear_1_340_0)" fill-opacity="1.000000"/>
+		<g clip-path="url(#clip1_340)">
+			<rect id="glass-fill-water-drink-bottle-cup-mug-svgrepo-com 1" rx="-0.500000" width="69.000000" height="69.000000" transform="translate(38.685242 34.944824)" fill="#FFFFFF" fill-opacity="0"/>
+			<g clip-path="url(#clip1_341)">
+				<path id="Vector" d="M79.7 73.25C88.05 72.65 91.4 75.71 91.4 75.71C91.85 76.11 91.9 76.8 91.5 77.25C91.1 77.71 90.41 77.75 89.96 77.35C89.96 77.35 87.03 74.91 79.82 75.43C79.8 75.44 79.78 75.44 79.75 75.44C79.75 75.44 77.03 75.48 71.37 77.56C68.2 78.72 64.71 78.36 61.7 77.57C58.88 76.84 56.51 75.74 55.36 75.39C54.78 75.21 54.46 74.6 54.63 74.02C54.81 73.44 55.43 73.12 56 73.3C57.14 73.65 59.47 74.73 62.26 75.46C64.86 76.13 67.88 76.51 70.62 75.5C76.36 73.4 79.33 73.26 79.7 73.25Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+				<path id="Vector" d="M85.4 98.97L91.79 65.31C91.91 64.72 92.48 64.33 93.07 64.44C93.66 64.55 94.06 65.13 93.94 65.72L87.38 100.27C87.28 100.79 86.83 101.16 86.31 101.16L60.06 101.16C59.53 101.16 59.08 100.79 58.98 100.27L52.42 65.72C52.31 65.13 52.7 64.55 53.29 64.44C53.88 64.33 54.46 64.72 54.57 65.31L60.96 98.97L85.4 98.97Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+				<path id="Vector" d="M67.51 38.18C67.3 37.89 66.97 37.72 66.62 37.72C66.27 37.72 65.93 37.89 65.73 38.18C65.73 38.18 62.45 42.77 60.49 46.9C59.58 48.81 58.96 50.64 58.96 51.94C58.96 56.17 62.39 59.6 66.62 59.6C70.84 59.6 74.27 56.17 74.27 51.94C74.27 50.64 73.66 48.81 72.75 46.9C70.78 42.77 67.51 38.18 67.51 38.18ZM66.62 40.75C65.54 42.35 63.72 45.19 62.46 47.84C61.72 49.4 61.15 50.88 61.15 51.94C61.15 54.96 63.6 57.41 66.62 57.41C69.64 57.41 72.09 54.96 72.09 51.94C72.09 50.88 71.52 49.4 70.78 47.84C69.51 45.19 67.69 42.35 66.62 40.75Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+				<path id="Vector" d="M80.7 55.79C80.51 55.44 80.14 55.22 79.74 55.22C79.34 55.22 78.98 55.44 78.78 55.79C78.78 55.79 76.96 59.12 75.86 62.12C75.35 63.51 75 64.85 75 65.79C75 68.41 77.13 70.53 79.74 70.53C82.36 70.53 84.48 68.41 84.48 65.79C84.48 64.85 84.14 63.51 83.63 62.12C82.53 59.12 80.7 55.79 80.7 55.79ZM79.74 58.69C79.17 59.86 78.45 61.4 77.91 62.87C77.5 63.98 77.19 65.04 77.19 65.79C77.19 67.2 78.33 68.35 79.74 68.35C81.15 68.35 82.3 67.2 82.3 65.79C82.3 65.04 81.98 63.98 81.57 62.87C81.04 61.4 80.32 59.86 79.74 58.69Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+				<path id="Vector" d="M80.84 82.79C80.84 84 79.86 84.98 78.65 84.98C77.44 84.98 76.46 84 76.46 82.79C76.46 81.58 77.44 80.6 78.65 80.6C79.86 80.6 80.84 81.58 80.84 82.79Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+				<path id="Vector" d="M69.9 91.31C69.9 92.52 68.92 93.5 67.71 93.5C66.5 93.5 65.52 92.52 65.52 91.31C65.52 90.11 66.5 89.13 67.71 89.13C68.92 89.13 69.9 90.11 69.9 91.31Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+			</g>
+		</g>
+	</g>
+</svg>
