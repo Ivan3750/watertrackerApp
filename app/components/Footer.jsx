@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="footer-content">
         <h3 className="footer-title">START USE WATER TRACKER APP!</h3>
         <p className="footer-info">Time to drink water!</p>
-        <button className="footer-btn">Open Web app</button>
+        <a href="/login" className="footer-btn">Open Web app</a>
         <div className="social-icons">
           <a href="https://facebook.com" className="icon"></a>
           <a href="https://instagram.com" className="icon"></a>

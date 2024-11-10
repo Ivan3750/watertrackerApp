@@ -4,6 +4,7 @@ import Tagline from "@/app/components/Tagline"
 import Core from "@/app/components/Core"
 import Footer from "@/app/components/Footer"
 import User from "@/app/components/User"
+import Load from "@/app/components/Load"
 export default function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Home() {
     <Core></Core>
     <User></User>
     <Footer></Footer>
+    <Load></Load>
     </main>
     </>
   );

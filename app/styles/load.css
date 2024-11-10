@@ -1,0 +1,63 @@
+.points{
+    display: flex;
+    gap: 5px;
+}
+
+.points div{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    animation: pointsAnim 4s infinite;
+}
+
+.points div:nth-child(1){
+    animation: pointsAnim 2.4s infinite cubic-bezier(0, 0.14, 0.5, 1.68);
+}
+.points div:nth-child(2){
+    animation: pointsAnim 2.41s infinite cubic-bezier(0, 0.14, 0.5, 1.68);
+}
+.points div:nth-child(3){
+    animation: pointsAnim 2.42s infinite cubic-bezier(0, 0.14, 0.5, 1.68);
+}
+.points div:nth-child(4){
+    animation: pointsAnim 2.43s infinite cubic-bezier(0, 0.14, 0.5, 1.68);
+}
+
+@keyframes pointsAnim {
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+
+.loadBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.loadInfo{
+color: rgb(255, 255, 255);
+font-family: Poppins;
+font-size: 14px;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: -1%;
+text-align: center;
+}
+
+.loadTitle{
+    color: rgb(255, 255, 255);
+font-family: Poppins;
+font-size: 24px;
+font-weight: 700;
+line-height: 108.92%;
+letter-spacing: 0%;
+text-align: center;
+}
