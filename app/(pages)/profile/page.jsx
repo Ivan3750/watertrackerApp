@@ -1,3 +1,4 @@
+import './../../styles/profile.css';
 const profilePage =()=> (
   <div id='profile'>
     <div id='profile-top'></div>
