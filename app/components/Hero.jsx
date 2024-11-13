@@ -43,7 +43,7 @@ const Hero = () => {
                 <p>Fully Customizable</p>
             </li>
         </ul>
-        <p className="info-create">Developed By: <span>Ivan Kohan</span></p>
+        <a href="/login" className="footer-btn">Open Web app</a>
     </div>
     <div className="hero__image">
         <Image src={LTPhone} className="phoneLT" data-aos="zoom-in-up"></Image>

@@ -1,4 +1,4 @@
-import './../../styles/profile.css';
+import './../../styles/profile.css'; // Даня ти можеш використовувати "@/app/style/profile.css" @ - корень
 import Input from './Input';
 const profilePage =()=> (
   <div id='profile'>

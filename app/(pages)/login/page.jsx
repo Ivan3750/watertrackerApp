@@ -1,17 +1,19 @@
-"use client";
-import "@/app/styles/login.css";
-import { useState } from "react";
+"use client"
+import "@/app/styles/login.css"
+import { set } from "mongoose"
+import { useState } from "react"
 
 export default function Auth() {
-    const [isLogin, setIsLogin] = useState(true);
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [username, setName] = useState("");
-    const [errorMessage, setErrorMessage] = useState("");
+    const [isLogin, setIsLogin] = useState(true)
+    const [isLoading, setLoading] = useState(false)
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [username, setName] = useState("")
+    const [errorMessage, setErrorMessage] = useState("")
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        const url = isLogin ? "/api/auth/login" : "/api/auth/register";
+        e.preventDefault()
+        const url = isLogin ? "/api/auth/login" : "/api/auth/register"
 
         try {
             const response = await fetch(url, {
@@ -20,27 +22,28 @@ export default function Auth() {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ email, password, username: isLogin ? undefined : username }),
-            });
+            })
 
             if (response.ok) {
-                const data = await response.json();
-                localStorage.setItem("token", data.token);
-                window.location.pathname = "/home";
+                setLoading(true)
+                window.location.pathname = "/test"
+                const data = await response.json()
+                localStorage.setItem("token", data.token)
             } else {
-                const errorData = await response.json();
-                setErrorMessage(errorData.message || "Something went wrong. Please try again.");
+                const errorData = await response.json()
+                setErrorMessage(errorData.message || "Something went wrong. Please try again.")
             }
         } catch (error) {
-            setErrorMessage("Error: " + error.message);
-            console.error("Error:", error);
+            setErrorMessage("Error: " + error.message)
+            console.error("Error:", error)
         }
-    };
+    }
 
     const toggleForm = () => {
-        setIsLogin(!isLogin);
-        setErrorMessage(""); // Clear error message when switching forms
-        setName(""); // Clear username field when switching to login
-    };
+        setIsLogin(!isLogin)
+        setErrorMessage("")
+        setName("")
+    }
 
     return (
         <div className="authContainer">
@@ -119,5 +122,5 @@ export default function Auth() {
                 </>
             )}
         </div>
-    );
+    )
 }

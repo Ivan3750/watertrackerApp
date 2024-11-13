@@ -5,16 +5,15 @@ const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken');
 const SECRET_KEY = "water"
 export async function POST(req) {
-  await connectMongo();  // Ensure DB is connected
+  await connectMongo()
 
 
-
-
-  const { email, password } = req.json();
+  const { email, password } = await req.json();
+  
   try {
     const user = await User.findOne({ email }).select("password email username");
     if (!user) {
-      return NextResponse.json({ message: "User not found" }, { status: 404 });
+      return NextResponse.json({ message: `User not found ${email} ${password}` }, { status: 404 });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
