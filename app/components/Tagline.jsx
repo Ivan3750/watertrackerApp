@@ -3,9 +3,9 @@
 
 import Image from "next/image";
 import drinkWater from "@/app/assets/drinkwater.svg"
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const Tagline = () => {
@@ -20,12 +20,12 @@ const Tagline = () => {
         <div className="tagline__block">
             <div className="tagline-info">
                 <p className="tagline-i-title">PROBLEM STATEMENT</p>
-                <p className="tagline-i-text">Many individuals struggle to maintain proper hydration throughout the day, leading to various health issues. With busy schedules and distractions, it's easy to forget to drink enough water. There is a need for a solution to address this problem.</p>
+                <p className="tagline-i-text">Many individuals struggle to maintain proper hydration throughout the day, leading to various health issues. With busy schedules and distractions, its easy to forget to drink enough water. There is a need for a solution to address this problem.</p>
                 <p className="tagline-i-title">PROBLEM SOLUTIONS</p>
                 <p className="tagline-i-text">Hydrate, a mobile app that allows users to track their water intake by settingpersonalized hydration goals and timely notification that reminds users to take a sip ofwater.</p>
             </div>
             <div className="tagline-img">
-                <Image src={drinkWater} data-aos="zoom-in-left"></Image>
+                <Image src={drinkWater} data-aos="zoom-in-left" alt="img"></Image>
             </div>
         </div>
     </section> );

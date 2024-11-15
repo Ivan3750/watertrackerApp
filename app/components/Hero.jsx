@@ -21,36 +21,36 @@ const Hero = () => {
   return <section className="hero">
     <div className="hero__info">
         <div className="title__box">
-        <Image src={waterDrop} alt="" width="100"/>
+        <Image src={waterDrop} alt="img" width="100"/>
         <h1 className="hero__title">Drops Water Tracker</h1>
         </div>
         <h2 className="hero__subtitle">Water Tracker App and Reminder App</h2>
         <ul className="hero__list">
             <li  data-aos="zoom-out-up">
-                <Image src={checkIcon} alt="*"></Image>
+                <Image src={checkIcon} alt="img"></Image>
                 <p>Detail system</p>
             </li>
             <li  data-aos="zoom-out-up">
-                <Image src={checkIcon} alt="*"></Image>
+                <Image src={checkIcon} alt="img"></Image>
                 <p>Pixel perfect</p>
             </li>
             <li  data-aos="zoom-out-up">
-                <Image src={checkIcon} alt="*"></Image>
+                <Image src={checkIcon} alt="img"></Image>
                 <p>Style guideline</p>
             </li>
             <li  data-aos="zoom-out-up">
-                <Image src={checkIcon} alt="*"></Image>
+                <Image src={checkIcon} alt="img"></Image>
                 <p>Fully Customizable</p>
             </li>
         </ul>
         <a href="/login" className="footer-btn">Open Web app</a>
     </div>
     <div className="hero__image">
-        <Image src={LTPhone} className="phoneLT" data-aos="zoom-in-up"></Image>
-        <Image src={RTPhone} className="phoneRT" data-aos="zoom-in-up"></Image>
-        <Image src={mainPhone} className="phoneM" data-aos="zoom-in-up"></Image>
-        <Image src={LBPhone} className="phoneLB" data-aos="zoom-in-up"></Image>
-        <Image src={RBPhone} className="phoneRB" data-aos="zoom-in-up"></Image>
+        <Image src={LTPhone} className="phoneLT" data-aos="zoom-in-up" alt="img"></Image>
+        <Image src={RTPhone} className="phoneRT" data-aos="zoom-in-up" alt="img"></Image>
+        <Image src={mainPhone} className="phoneM" data-aos="zoom-in-up" alt="img"></Image>
+        <Image src={LBPhone} className="phoneLB" data-aos="zoom-in-up" alt="img"></Image>
+        <Image src={RBPhone} className="phoneRB" data-aos="zoom-in-up" alt="img"></Image>
     </div>
   
   </section>;

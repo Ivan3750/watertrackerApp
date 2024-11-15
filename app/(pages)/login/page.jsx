@@ -72,7 +72,7 @@ export default function Auth() {
                         <button type="submit" className="btnSubmit">LOG IN</button>
                         {errorMessage && <p className="error">{errorMessage}</p>}
                         <p>
-                            Don't have an account?{" "}
+                            Dont have an account?{" "}
                             <button type="button" className="textBtn" onClick={toggleForm}>
                                 Sign up
                             </button>

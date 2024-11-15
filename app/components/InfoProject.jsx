@@ -23,7 +23,7 @@ const InfoProject = () => {
             <h3 className="i-project-title">MY ROLE</h3>
             <p className="i-project-text">Carryout User Experience Research and User Interface Design</p>
             <div className="i-project-widget">
-                <Image src={clock}></Image>
+                <Image src={clock} alt="img"></Image>
                 <div className="widget-txt-box">
                     <p className="widget-title">Project Duration:</p>
                     <p className="widget-subtitle">6 weeks</p>
@@ -31,8 +31,8 @@ const InfoProject = () => {
             </div>
             </div>
             <div className="i-project-img">
-                <Image src={phone1} data-aos="zoom-in-down" className="i-project-phone" width="400px"></Image>
-                <Image src={phone2} data-aos="zoom-in-down" className="i-project-phone" width="400px"></Image>
+                <Image src={phone1} data-aos="zoom-in-down" className="i-project-phone" width="400px" alt="img"></Image>
+                <Image src={phone2} data-aos="zoom-in-down" className="i-project-phone" width="400px" alt="img"></Image>
             </div>
         </div>
         <div></div>

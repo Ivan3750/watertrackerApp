@@ -11,11 +11,11 @@ const User = () => {
         <h5 className="user-title">USER
         PERSONAS</h5>
         <p className="user-subtitle">USER
-        PERI created a user persona that highlights the users' frustration, goals, and demographic using the information I learned from the interview sessions. </p>
+        PERI created a user persona that highlights the users frustration, goals, and demographic using the information I learned from the interview sessions. </p>
         </div>
         <div className="user-main">
             <div className="u-main-img">
-                <Image src={personDraw} width="300"></Image>
+                <Image src={personDraw} width="300" alt="img"></Image>
             </div>
             <div className="u-main-info">
                 <div className="u-main-top">
