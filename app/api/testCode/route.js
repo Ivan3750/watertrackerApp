@@ -1,5 +1,5 @@
 import { connectMongo } from "@/app/lib/mongodb.js"
-import User from "../db.js"
+import User from "@/app/api/auth/db.js"
 import { NextResponse } from 'next/server'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'

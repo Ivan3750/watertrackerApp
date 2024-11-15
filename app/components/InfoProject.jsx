@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import phone1 from "@/app/assets/iPhone 14 pro.png"
+import phone1 from "@/app/assets/iPhone 14 Pro.png"
 import phone2 from "@/app/assets/phone 2.png"
 import clock from "@/app/assets/clock.svg"
 import { useEffect } from 'react';
