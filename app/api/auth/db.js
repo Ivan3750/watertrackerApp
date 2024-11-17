@@ -1,21 +1,17 @@
 import mongoose from 'mongoose';
 
 const UserSchema = new mongoose.Schema({
-  fullname: { type: String, required: true, unique: true },
+  username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  age: Number,
+  age: {type: Number, default: 18 },
   gender: String,
-  unit: {
-    weight: String,
-    volume: String,
-  },
   time: {
     wakeUp: Date, 
     sleepTime: Date,
   },
-  weight: String,
-  height: String,
+  weight: {type: Number, default: 0 },
+  height: {type: Number, default: 0 },
   waterTracker: [{ amount: Number, date: Date }],
 
 });
