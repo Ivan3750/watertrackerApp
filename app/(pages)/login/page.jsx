@@ -1,9 +1,14 @@
 "use client"
 import "@/app/styles/login.css"
 import { set } from "mongoose"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Auth() {
+    useEffect(()=>{
+        if(localStorage.token){
+            window.location.href = "/home"
+        }
+    },[])
     const [isLogin, setIsLogin] = useState(true)
     const [isLoading, setLoading] = useState(false)
     const [email, setEmail] = useState("")
