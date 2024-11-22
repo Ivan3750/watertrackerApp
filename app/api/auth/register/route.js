@@ -4,14 +4,13 @@ import { NextResponse } from 'next/server';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
-const SECRET_KEY = process.env.SECRET_KEY || "defaultsecret";
+const SECRET_KEY = process.env.SECRET_KEY || "water";
 
 export async function POST(req) {
   await connectMongo();  
   try {
     const { username, email, password } = await req.json();
     if (!username || !email || !password) {
-      console.log(das)
       return NextResponse.json({ message: "Username, email, and password are required" }, { status: 400 });
     }
 

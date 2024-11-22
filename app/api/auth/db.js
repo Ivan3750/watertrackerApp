@@ -12,6 +12,7 @@ const UserSchema = new mongoose.Schema({
   },
   weight: {type: Number, default: 0 },
   height: {type: Number, default: 0 },
+  goal: {type: Number, default: 2000},
   waterTracker: [{ amount: Number, date: Date }],
 
 });
