@@ -1,4 +1,5 @@
 "use client";
+import { Suspense } from 'react'
 
 import "@/app/styles/goal.css";
 import GoalCard from "@/app/components/GoalCard";
@@ -50,7 +51,7 @@ const WaterGoal = () => {
 
 
   useEffect(()=>{
-
+      
   },[goalAmount])
 
 
@@ -59,7 +60,9 @@ const WaterGoal = () => {
   );
 
   return (
+  
     <div className="container">
+      
       <div className="header">
         <h2 className="header-text">Set Your Goal</h2>
         <div className="goal-display">
@@ -96,8 +99,7 @@ const WaterGoal = () => {
           ))}
         </div>
       </div>
-    </div>
-  );
+    </div> );
 };
 
 export default WaterGoal;
