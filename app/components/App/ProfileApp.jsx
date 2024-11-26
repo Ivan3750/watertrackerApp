@@ -1,6 +1,8 @@
 import "@/app/styles/profile.css";
-import Input from './Input';
-const profilePage =()=> (
+import Input from '../Input';
+
+
+const ProfileApp =()=> (
   <div id='profile'>
     <div id='profile-top'>
       <div id='back'/>
@@ -9,12 +11,11 @@ const profilePage =()=> (
     </div>
     <div id='profile-content'>
       <div id='profile'/>
-      <Input type='text' desc='First Name'/>
-      <Input type='text' desc='Last Name'/>
+      <Input type='text' desc='Username'/>
       <Input type='email' desc='Email Adress'/>
       <Input type='number' desc='Age'/>
       <button id='profile-update'>Update</button>
     </div>
   </div>
 );
-export default profilePage;
+export default ProfileApp;

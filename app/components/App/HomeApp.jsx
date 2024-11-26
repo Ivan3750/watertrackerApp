@@ -1,14 +1,14 @@
 import "@/app/styles/home.css"
-import FooterApp from "@/app/components/FooterApp"
+import FooterApp from "@/app/components/App/FooterApp"
 import WaterDrop from "@/app/assets/water drop.svg"
 import Image from "next/image"
 
 
 
 
-const WaterTracker = () => {    
+const HomeApp = () => {    
     return (
-      <div className="container">
+        <>
         <header className="header">
           <p>Good Morning,</p>
           <h2>Aashifa Sheikh</h2>
@@ -36,9 +36,9 @@ const WaterTracker = () => {
             </div>
           </div>
         </section>
-        <FooterApp></FooterApp>
-      </div>
+        </>
+        
     );
   };
   
-  export default WaterTracker;
+  export default HomeApp;

@@ -6,7 +6,7 @@ import GoalCard from "@/app/components/GoalCard";
 import search from "@/app/assets/search.svg";
 import { useState, useEffect } from "react";
 
-const WaterGoal = () => {
+const GoalApp = () => {
   const [searchValue, setSearchValue] = useState("");
   const [goalAmount, setGoalAmount] = useState(2000);
 
@@ -61,8 +61,7 @@ const WaterGoal = () => {
 
   return (
   
-    <div className="container">
-      
+    <>
       <div className="header">
         <h2 className="header-text">Set Your Goal</h2>
         <div className="goal-display">
@@ -74,7 +73,7 @@ const WaterGoal = () => {
             step="50"
             value={goalAmount}
             onChange={(e) => setGoalAmount(Number(e.target.value))}
-          />
+            />
           <span>ml</span>
         </div>
       </div>
@@ -87,19 +86,20 @@ const WaterGoal = () => {
           className="search-input"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
-        />
+          />
         <div className="cards-container">
           {filteredCards.map((card, index) => (
-            <GoalCard
+              <GoalCard
               key={index}
               title={card.title}
               amount={card.amount}  
               onClick={() => setGoalAmount(card.amount)}  
-            />
-          ))}
+              />
+            ))}
         </div>
       </div>
-    </div> );
+            </>
+     );
 };
 
-export default WaterGoal;
+export default GoalApp;

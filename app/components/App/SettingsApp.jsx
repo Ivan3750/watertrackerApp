@@ -1,5 +1,5 @@
 import "@/app/styles/profile.css";
-const settingsPage =()=> (
+const SettingsApp =()=> (
   <div id='settings'>
     <div id='settings-header'>
 
@@ -23,4 +23,4 @@ const settingsPage =()=> (
     </div>
   </div>
 );
-export default settingsPage;
+export default SettingsApp;

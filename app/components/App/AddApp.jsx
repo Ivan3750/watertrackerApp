@@ -6,7 +6,7 @@ import GoalCard from "@/app/components/GoalCard";
 import search from "@/app/assets/search.svg";
 import { useState, useEffect } from "react";
 
-const WaterGoal = () => {
+const AddApp = () => {
   const [searchValue, setSearchValue] = useState(""); 
   const [amount, setAmount] = useState(200);
 
@@ -55,9 +55,7 @@ const WaterGoal = () => {
   );
 
   return (
-  
-    <div className="container">
-      
+<>
       <div className="header">
         <h2 className="header-text">Water Amount</h2>
         <div className="goal-display">
@@ -69,7 +67,7 @@ const WaterGoal = () => {
             step="50"
             value={amount}
             onChange={(e) => setAmount(Number(e.target.value))}
-          />
+            />
           <span>ml</span>
         </div>
       </div>
@@ -80,21 +78,22 @@ const WaterGoal = () => {
           type="text"
           placeholder="Search Template"
           className="search-input"
-          value={searchValue}
+          value={searchValue}   
           onChange={(e) => setSearchValue(e.target.value)}
-        />
+          />
         <div className="cards-container">
           {filteredCards.map((card, index) => (
             <GoalCard
-              key={index}
-              title={card.title}
-              amount={card.amount}  
-              onClick={() => setAmount(card.amount)}  
+            key={index}
+            title={card.title}
+            amount={card.amount}  
+            onClick={() => setAmount(card.amount)}  
             />
-          ))}
+        ))}
         </div>
       </div>
-    </div> );
+        </>
+ );
 };
 
-export default WaterGoal;
+export default AddApp;
