@@ -1,4 +1,4 @@
-import './../../styles/settings.css';
+import "@/app/styles/profile.css";
 const settingsPage =()=> (
   <div id='settings'>
     <div id='settings-header'>
