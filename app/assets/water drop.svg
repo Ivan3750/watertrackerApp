@@ -1,0 +1,57 @@
+<svg width="272.745117" height="288.901459" viewBox="0 0 272.745 288.901" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_1_1621_dd" x="0.000000" y="0.000000" width="272.745117" height="288.901459" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="33.3333" result="effect_layerBlur_1"/>
+		</filter>
+		<filter id="filter_1_1622_dd" x="85.010986" y="102.000305" width="100.882812" height="88.010208" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="3.33333" result="effect_layerBlur_1"/>
+		</filter>
+		<filter id="filter_1_1626_dd" x="29.631104" y="66.156403" width="178.980469" height="178.980347" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="16.6667" result="effect_layerBlur_1"/>
+		</filter>
+		<radialGradient gradientTransform="translate(136.578 152.737) rotate(-46.0086) scale(83.4903 67.0605)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_1_1620_0" gradientUnits="userSpaceOnUse">
+			<stop offset="0.109324" stop-color="#3CC7F5"/>
+			<stop offset="1.000000" stop-color="#5686F5"/>
+		</radialGradient>
+		<radialGradient gradientTransform="translate(136.373 164.882) rotate(-46.025) scale(73.0757 58.6942)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_1_1621_0" gradientUnits="userSpaceOnUse">
+			<stop offset="0.109324" stop-color="#3CC7F5"/>
+			<stop offset="1.000000" stop-color="#5686F5"/>
+		</radialGradient>
+		<radialGradient gradientTransform="translate(136.58 152.576) rotate(-46.0082) scale(83.4898 67.0602)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_1_1622_0" gradientUnits="userSpaceOnUse">
+			<stop offset="0.109324" stop-color="#3CC7F5"/>
+			<stop offset="1.000000" stop-color="#5686F5"/>
+		</radialGradient>
+		<radialGradient gradientTransform="translate(150.298 116.156) rotate(51.5592) scale(42.4575 9.61115)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_1_1625_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFFFFF"/>
+			<stop offset="0.601048" stop-color="#BDDBF1" stop-opacity="0.278431"/>
+			<stop offset="1.000000" stop-color="#5686F5" stop-opacity="0.000000"/>
+		</radialGradient>
+		<radialGradient gradientTransform="translate(119.121 155.647) rotate(50.1428) scale(29.5123 29.3353)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_1_1626_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFFFFF"/>
+			<stop offset="0.601048" stop-color="#BDDBF1" stop-opacity="0.278431"/>
+			<stop offset="1.000000" stop-color="#5686F5" stop-opacity="0.000000"/>
+		</radialGradient>
+	</defs>
+	<path id="Ellipse 2" d="M178.14 138.6C178.14 161.56 159.53 180.17 136.57 180.17C113.62 180.17 95 161.56 95 138.6C95 116.56 111.1 102.55 133.71 79.58C135.29 77.98 137.87 77.98 139.45 79.57C161.88 102.18 178.14 116.57 178.14 138.6Z" fill="url(#paint_radial_1_1620_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<g opacity="0.800000" filter="url(#filter_1_1621_dd)">
+		<path id="Ellipse 6" d="M172.74 152.5C172.74 172.6 156.46 188.9 136.37 188.9C116.28 188.9 100 172.6 100 152.5C100 133.32 113.9 121.09 133.5 101.2C135.08 99.6 137.66 99.59 139.24 101.19C158.68 120.77 172.74 133.34 172.74 152.5Z" fill="url(#paint_radial_1_1621_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+	<g filter="url(#filter_1_1622_dd)" style="mix-blend-mode:color-burn">
+		<path id="Subtract" d="M103.927 112C98.2739 120.22 95.011 128.517 95.011 138.442C95.011 161.4 113.622 180.011 136.58 180.011C154.797 180.011 170.278 168.291 175.894 151.98C168.3 161.942 156.308 168.371 142.814 168.371C119.857 168.371 101.246 149.761 101.246 126.803C101.246 121.48 102.184 116.626 103.927 112Z" clip-rule="evenodd" fill="url(#paint_radial_1_1622_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+	<g opacity="0.300000" style="mix-blend-mode:screen">
+		<circle id="Ellipse 4" cx="150.298096" cy="116.156342" r="39.490181" fill="url(#paint_radial_1_1625_0)" fill-opacity="1.000000"/>
+	</g>
+	<g opacity="0.700000" filter="url(#filter_1_1626_dd)" style="mix-blend-mode:screen">
+		<circle id="Ellipse 5" cx="119.121338" cy="155.646576" r="39.490181" fill="url(#paint_radial_1_1626_0)" fill-opacity="1.000000"/>
+	</g>
+</svg>

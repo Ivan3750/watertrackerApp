@@ -1,0 +1,25 @@
+.container {
+    font-family: Poppins;
+      background-color: #f0f8ff;
+      padding: 15px;
+      border-radius: 10px;
+      width: 375px;
+      margin: 0 auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .header h2 {
+        /* 20/Semibold */
+      color: rgb(20, 26, 30);
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 32px;
+      letter-spacing: 0%;
+      text-align: left;
+        }
+ 
