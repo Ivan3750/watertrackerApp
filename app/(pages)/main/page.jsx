@@ -16,7 +16,7 @@ const Main = () => {
     const renderPage = () => {
         switch (page) {
             case "home":
-                return <HomeApp />;
+                return <HomeApp linkFunc={setPage}/>;
             case "analysis":
                 return <AnalysisApp />;
             case "goal":
@@ -37,11 +37,16 @@ const Main = () => {
         console.log(page)
     }, [page])
     return (
+            <>
         <div className="container">
+            <main>
             {renderPage()}
+            </main>
+           
 
             <FooterApp  linkFunc={setPage}/>
         </div>
+            </>
     );
 };
 

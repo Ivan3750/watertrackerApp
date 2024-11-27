@@ -6,7 +6,7 @@ import Image from "next/image"
 
 
 
-const HomeApp = () => {    
+const HomeApp = ({linkFunc}) => {    
     return (
         <>
         <header className="header">
@@ -18,7 +18,7 @@ const HomeApp = () => {
           <div className="reminder-content">
             <p className="last-time">11:00 AM</p>
             <p className="amount-water">200ml water (2 Glass)</p>
-            <a href="/goal" className="goal-button">Add Your Goal</a>
+            <button onClick={()=>{linkFunc("goal")}} className="goal-button">Add Your Goal</button>
           </div>
           <div className="water-drop">
             <Image src={WaterDrop} alt="Water Drop" />
@@ -26,7 +26,7 @@ const HomeApp = () => {
         </section>
   
         <section className="chart-section">
-          <div className="chart">
+          <div className="chart-circle">
             <p className="water-amount">500ml</p>
           </div>
           <div className="progress">
