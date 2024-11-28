@@ -1,7 +1,7 @@
 import TelegramBot from 'node-telegram-bot-api';
 import axios from 'axios';
-import { connectMongo } from './mongodb.js';
-import User from './db.js';
+import { connectMongo } from '@/app/lib/mongodb.js';
+import User from '@/app/api/auth/db';
 
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN || "7928500614:AAGl0v_uidAUp1dGsn98kQTJbFOCDW6ZGVA";
 const WEB_APP_URL = process.env.WEB_APP_URL || 'https://watertrackerapp.onrender.com/login';

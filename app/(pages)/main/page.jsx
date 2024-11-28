@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import HomeApp from "@/app/components/App/HomeApp";
 import FooterApp from "@/app/components/App/FooterApp";
@@ -7,47 +7,88 @@ import AnalysisApp from "@/app/components/App/AnalysisApp";
 import AddApp from "@/app/components/App/AddApp";
 import ProfileApp from "@/app/components/App/ProfileApp";
 import SettingsApp from "@/app/components/App/SettingsApp";
+import Load from "@/app/components/Load";
 import "@/app/styles/home.css";
 import { useEffect, useState } from "react";
+import GetUserData from "@/app/lib/GET"
+import "@/app/styles/main.css";
 
 const Main = () => {
-    const [page, setPage] = useState("home");
+  const [page, setPage] = useState("load");
+  const [user, setUser] = useState({});
 
-    const renderPage = () => {
-        switch (page) {
-            case "home":
-                return <HomeApp linkFunc={setPage}/>;
-            case "analysis":
-                return <AnalysisApp />;
-            case "goal":
-                return <GoalApp />;
-            case "add":
-                return <AddApp/>
-            case "settings":
-                return <SettingsApp/>
-            case "profile":
-                return <ProfileApp/>
-            default:
-                return <div>Page not found</div>;
-        }
-    };
+  useEffect(() => {
+    fetch("/api/profil", {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${localStorage.token}`,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setUser(data);
+        setTimeout(() => {
+          setPage("home");
+        }, 500);
+      })
+      .catch((error) => console.error(error));
+  }, []);
+  useEffect(() => {
+    fetch("/api/profil", {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${localStorage.token}`,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setUser(data);
+        
+      })
+      .catch((error) => console.error(error));
+  }, [page]);
 
 
-    useEffect(()=>{
-        console.log(page)
-    }, [page])
-    return (
-            <>
-        <div className="container">
-            <main>
-            {renderPage()}
-            </main>
-           
 
-            <FooterApp  linkFunc={setPage}/>
-        </div>
-            </>
-    );
+  
+
+  const renderPage =  () => {
+    switch (page) { 
+      case "home":
+        return <HomeApp linkFunc={setPage} userdata={user} />;
+      case "analysis":
+        return <AnalysisApp userdata={user} />;
+      case "goal":
+        return <GoalApp userdata={user} />;
+      case "add":
+        return <AddApp userdata={user} />;
+      case "settings":
+        return <SettingsApp userdata={user} />;
+      case "profile":
+        return <ProfileApp userdata={user} />;
+      case "load":
+        return <Load userdata={user} />;
+      default:
+        return <div>Page not found</div>;
+    }
+    
+  };
+
+
+  if (page === "load") {
+    return (<div className="container-load">
+        <Load userdata={user} />
+        
+        </div>)
+  }
+
+  return (
+    <div className="container">
+      <main>{renderPage()}</main>
+      <FooterApp linkFunc={setPage} />
+    </div>
+  );
+
 };
 
 export default Main;

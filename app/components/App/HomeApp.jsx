@@ -1,38 +1,55 @@
 import "@/app/styles/home.css"
-import FooterApp from "@/app/components/App/FooterApp"
 import WaterDrop from "@/app/assets/water drop.svg"
 import Image from "next/image"
+import { useEffect } from "react";
 
 
 
 
-const HomeApp = ({linkFunc}) => {    
+const HomeApp = ({linkFunc, userdata}) => {    
+  let amount = 0
+  const calcPosition = () =>{
+      amount = userdata.waterTracker.reduce((acc, el)=>{
+        return acc + el.amount 
+      }, 0)
+      let position = 100-(amount/userdata.goal) * 140
+      console.log(position, amount , userdata.goal)
+      if(position < -40){
+        position = -40
+      }else if(position > 100){
+        position = 100
+      }
+      return position
+    }
+
     return (
         <>
         <header className="header">
           <p>Good Morning,</p>
-          <h2>Aashifa Sheikh</h2>
+          <h2>{userdata.username}</h2>
         </header>
   
         <section className="reminder">
           <div className="reminder-content">
             <p className="last-time">11:00 AM</p>
-            <p className="amount-water">200ml water (2 Glass)</p>
+            <p className="amount-water">200ml water</p>
             <button onClick={()=>{linkFunc("goal")}} className="goal-button">Add Your Goal</button>
           </div>
           <div className="water-drop">
             <Image src={WaterDrop} alt="Water Drop" />
           </div>
         </section>
-  
-        <section className="chart-section">
-          <div className="chart-circle">
-            <p className="water-amount">500ml</p>
+
+        <section className="chart-section" >
+          <div className="chart-circle" style={{ backgroundPositionY: `${calcPosition()}px`}}>
+            <p className="water-amount">{amount}ml</p>
           </div>
           <div className="progress">
             <div className="target">
               <p className="target-title">Target</p>
-              <p classname="target-amount">2000ml</p>
+              <p className="target-amount">
+                {userdata.goal}
+                ml</p>
             </div>
           </div>
         </section>
@@ -41,4 +58,4 @@ const HomeApp = ({linkFunc}) => {
     );
   };
   
-  export default HomeApp;
+  export default HomeApp; 
