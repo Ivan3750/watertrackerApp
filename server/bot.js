@@ -116,3 +116,4 @@ async function setMenuButton() {
 setMenuButton();
 
 console.log('Бот запущено!');
+module.exports = bot;
