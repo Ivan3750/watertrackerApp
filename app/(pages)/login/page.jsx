@@ -2,19 +2,20 @@
 import "@/app/styles/login.css"
 import { set } from "mongoose"
 import { useState, useEffect } from "react"
+import { useSearchParams } from 'next/navigation';
 
 export default function Auth() {
-    useEffect(()=>{
-        if(localStorage.token){
-            window.location.href = "/home"
-        }
-    },[])
+    
+
     const [isLogin, setIsLogin] = useState(true)
-    const [isLoading, setLoading] = useState(false)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [username, setName] = useState("")
     const [errorMessage, setErrorMessage] = useState("")
+    const searchParams = useSearchParams();
+    const chatId = searchParams.get('chatid');
+
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -26,12 +27,13 @@ export default function Auth() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ email, password, username: isLogin ? undefined : username }),
+                body: JSON.stringify({ chatId, email, password, username: isLogin ? undefined : username }),
             })
 
             if (response.ok) {
-                setLoading(true)
-                window.location.pathname = "/test"
+             
+                window.location.pathname = "/main"
+                window.location.search = ""
                 const data = await response.json()
                 localStorage.setItem("token", data.token)
             } else {
