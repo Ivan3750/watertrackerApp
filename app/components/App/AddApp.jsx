@@ -1,13 +1,14 @@
 "use client";
+
 import { useState, useEffect, useMemo } from "react";
 import "@/app/styles/goal.css";
 import GoalCard from "@/app/components/GoalCard";
-import GetUserData from "@/app/lib/GET"
+import GetUserData from "@/app/lib/GET";
 
-const AddApp = ({userdata}) => {
+const AddApp = ({ userdata }) => {
   const [searchValue, setSearchValue] = useState("");
   const [amount, setAmount] = useState(200);
-  const token = localStorage.getItem("token");
+  const [token, setToken] = useState("");
   const url = "/api/profil";
 
   const amountCards = [
@@ -25,7 +26,13 @@ const AddApp = ({userdata}) => {
     { title: "Pitcher of Water", amount: 2000 },
   ];
 
-  // Fetch user profile data
+  useEffect(() => {
+    const storedToken = localStorage.getItem("token");
+    if (storedToken) {
+      setToken(storedToken);
+    }
+  }, []);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -42,40 +49,43 @@ const AddApp = ({userdata}) => {
         console.error("Fetch failed:", error);
       }
     };
-    fetchData();
+    if (token) fetchData();
   }, [url, token]);
 
-  // Update user data
   const FuncUpdateUserData = async () => {
     try {
-      const newUserData = await GetUserData()
-      console.log("data: " + newUserData)
+      const newUserData = await GetUserData();
+      const updatedWaterTracker = [
+        ...(newUserData.waterTracker || []),
+        { amount, date: new Date().toISOString() },
+      ];
+
       const response = await fetch(url, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          waterTracker: [...newUserData.waterTracker, 
-            { amount: amount, date: new Date().toISOString() },
-          ],
-        }),
-        
+        body: JSON.stringify({ waterTracker: updatedWaterTracker }),
       });
-      if (response.ok) {
-        const result = await response.json();
-        console.log("Update successful:", result);
-      } else {
+
+      if (!response.ok) {
         const error = await response.json();
-        console.error("Error:", error.message);
+        throw new Error(error.message);
       }
+
+      const result = await response.json();
+      console.log("Update successful:", result);
     } catch (error) {
-      console.error("Request failed:", error);
+      console.error("Request failed:", error.message || error);
     }
   };
 
-  // Memoize filtered cards for better performance
+  const handleAmountChange = (e) => {
+    const value = Math.max(100, Math.min(5000, Number(e.target.value)));
+    setAmount(value);
+  };
+
   const filteredCards = useMemo(
     () =>
       amountCards.filter((card) =>
@@ -96,7 +106,7 @@ const AddApp = ({userdata}) => {
             max="5000"
             step="50"
             value={amount}
-            onChange={(e) => setAmount(Number(e.target.value))}
+            onChange={handleAmountChange}
           />
           <span>ml</span>
         </div>
@@ -121,12 +131,7 @@ const AddApp = ({userdata}) => {
             />
           ))}
         </div>
-        <button
-          className="update-button"
-          onClick={() =>
-            FuncUpdateUserData()
-          }
-        >
+        <button className="update-button" onClick={FuncUpdateUserData}>
           Add to Tracker
         </button>
       </div>
