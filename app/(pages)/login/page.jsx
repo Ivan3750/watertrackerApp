@@ -1,9 +1,8 @@
-"use client"
+'use client';
+
 import "@/app/styles/login.css"
 import { set } from "mongoose"
 import { useState, useEffect } from "react"
-import { useSearchParams } from 'next/navigation';
-
 export default function Auth() {
     
 
@@ -12,15 +11,16 @@ export default function Auth() {
     const [password, setPassword] = useState("")
     const [username, setName] = useState("")
     const [errorMessage, setErrorMessage] = useState("")
-    const searchParams = useSearchParams();
-    const chatId = searchParams.get('chatid');
 
+
+
+    
     
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         const url = isLogin ? "/api/auth/login" : "/api/auth/register"
-
+        const chatId = window.location.search
         try {
             const response = await fetch(url, {
                 method: "POST",
