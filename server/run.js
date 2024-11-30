@@ -17,8 +17,8 @@ app.prepare().then(() => {
     const parsedUrl = parse(req.url, true);
     handle(req, res, parsedUrl);
   });
-
-  server.listen(3000, () => {
+  const PORT = process.env.PORT || 3000;
+  server.listen(PORT, () => {
     console.log('> Ready on http://localhost:3000');
   });
 });
