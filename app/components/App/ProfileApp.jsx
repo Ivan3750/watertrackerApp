@@ -1,7 +1,6 @@
 import "@/app/styles/profile.css";
 import Input from '../Input';
 
-
 const ProfileApp =()=> (
   
   <div id='profile'>

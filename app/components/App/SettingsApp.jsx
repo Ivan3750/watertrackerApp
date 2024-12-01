@@ -1,4 +1,4 @@
-import "@/app/styles/profile.css";
+import "@/app/styles/settings.css";
 const SettingsApp =()=> (
   <div id='settings'>
     <div id='settings-header'>
