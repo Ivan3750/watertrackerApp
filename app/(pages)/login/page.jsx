@@ -31,9 +31,9 @@ export default function Auth() {
             })
 
             if (response.ok) {
-             
-                window.location.pathname = "/main"
+                console.log("ok")
                 window.location.search = ""
+                window.location.pathname = "/main"
                 const data = await response.json()
                 localStorage.setItem("token", data.token)
             } else {
