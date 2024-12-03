@@ -1,4 +1,9 @@
 import mongoose from 'mongoose';
+function setDefaultTime(hours, minutes) {
+  const date = new Date();
+  date.setHours(hours, minutes, 0, 0); // Установка часу
+  return date;
+}
 
 const UserSchema = new mongoose.Schema({
   chatId: { type: Number},
@@ -8,8 +13,14 @@ const UserSchema = new mongoose.Schema({
   age: {type: Number, default: 18 },
   gender: String,
   time: {
-    wakeUp: Date, 
-    sleepTime: Date,
+    wakeUp: { 
+      type: Date, 
+      default: () => setDefaultTime(8, 0) 
+    },
+    sleepTime: { 
+      type: Date, 
+      default: () => setDefaultTime(20, 0) 
+    },
   },
   weight: {type: Number, default: 0 },
   height: {type: Number, default: 0 },

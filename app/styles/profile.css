@@ -1,7 +1,34 @@
-#profile-update {
+.profile-update {
   display: block;
   background-color: #62CDFA;
   border-radius: 8px;
   padding: 8px 8px;
   color: white;
+}
+
+.input-setting{
+  width: 100%;
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.input-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.profile-title{
+  /* 20/Semibold */
+color: rgb(0, 0, 0);
+font-family: Poppins;
+font-size: 20px;
+font-weight: 600;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: center;
 }

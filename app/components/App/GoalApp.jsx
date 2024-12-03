@@ -8,10 +8,8 @@ const GoalApp = ({ userdata }) => {
   const [searchValue, setSearchValue] = useState("");
   const [goalAmount, setGoalAmount] = useState(userdata.goal);
 
-  const token = localStorage.getItem("token"); // Отримання токена користувача
-  const url = "/api/profil"; // URL для оновлення даних користувача
-
-  // Функція для оновлення goal на сервері
+  const token = localStorage.getItem("token"); 
+  const url = "/api/profil"; 
   const updateGoalOnServer = async (newGoal) => {
     try {
       const response = await fetch(url, {

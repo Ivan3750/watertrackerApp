@@ -43,7 +43,7 @@ const AddApp = ({ userdata }) => {
           },
         });
         const data = await response.json();
-        if (response.ok) setAmount(Number(data.goal) || 200);
+        if (response.ok) setAmount(Number(data.amount) || 200);
         else console.error("Error fetching profile:", data.message);
       } catch (error) {
         console.error("Fetch failed:", error);
@@ -96,8 +96,9 @@ const AddApp = ({ userdata }) => {
 
   return (
     <>
-      <div className="header">
+      <div className="header-goal">
         <h2 className="header-text">Water Amount</h2>
+        </div>
         <div className="goal-display">
           <input
             type="number"
@@ -109,7 +110,6 @@ const AddApp = ({ userdata }) => {
             onChange={handleAmountChange}
           />
           <span>ml</span>
-        </div>
       </div>
       <div className="goal-section">
         <h3 className="section-title">Water</h3>
@@ -131,10 +131,10 @@ const AddApp = ({ userdata }) => {
             />
           ))}
         </div>
+      </div>
         <button className="update-button" onClick={FuncUpdateUserData}>
           Add to Tracker
         </button>
-      </div>
     </>
   );
 };
