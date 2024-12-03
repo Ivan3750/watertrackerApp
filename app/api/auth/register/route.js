@@ -11,7 +11,7 @@ export async function POST(req) {
   try {
     const { chatId, username, email, password } = await req.json();
     if (!username || !email || !password || !chatId) {
-      return NextResponse.json({ message: "Username, email, chatId, and password are required" }, { status: 400 });
+      return NextResponse.json({ message: `Username, email, chatId, and password are required, ${chatId}` }, { status: 400 });
     }
 
     const chatIdNumbers = chatId.match(/\d+/g);
