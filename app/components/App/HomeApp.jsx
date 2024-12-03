@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 const HomeApp = ({linkFunc, userdata}) => {    
   let amount = 0
-  const calcPosition = () =>{
+  /*const calcPosition = () =>{
       amount = userdata.waterTracker.reduce((acc, el)=>{
         return acc + el.amount 
       }, 0)
@@ -20,7 +20,7 @@ const HomeApp = ({linkFunc, userdata}) => {
         position = 100
       }
       return position
-    }
+    }*/
 
     return (
         <>
@@ -41,7 +41,7 @@ const HomeApp = ({linkFunc, userdata}) => {
         </section>
 
         <section className="chart-section" >
-          <div className="chart-circle" style={{ backgroundPositionY: `${calcPosition()}px`}}>
+          <div className="chart-circle" style={{ backgroundPositionY: `${/*calcPosition()*/0}px`}}>
             <p className="water-amount">{amount}ml</p>
           </div>
           <div className="progress">
