@@ -52,7 +52,7 @@ const User = mongoose.model('User', UserSchema);
 
 bot.onText(/\/start/, async (msg) => {
   const chatId = msg.chat.id;
-  WEB_APP_URL = process.env.WEB_APP_URL || `https://watertrackerapp.onrender.com/login?chatId=${chatId}`
+  WEB_APP_URL = process.env.WEB_APP_URL || `https://watertrackerapp.onrender.com/login/${chatId}`
   try {
     bot.sendMessage(chatId, 'Привіт! Я Water Tracker Bot. Я буду нагадувати тобі пити воду щогодини!');
   } catch (error) {

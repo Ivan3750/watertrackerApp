@@ -3,9 +3,9 @@
 import "@/app/styles/login.css"
 import { set } from "mongoose"
 import { useState, useEffect } from "react"
-export default function Auth() {
-    
+import { useRouter } from 'next/router';
 
+export default function Auth() {
     const [isLogin, setIsLogin] = useState(true)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -20,7 +20,8 @@ export default function Auth() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         const url = isLogin ? "/api/auth/login" : "/api/auth/register"
-        const chatId = window.location.search
+        let chatId = (Number(window.location.pathname.split("/")[2]))
+
         try {
             const response = await fetch(url, {
                 method: "POST",
