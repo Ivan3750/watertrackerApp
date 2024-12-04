@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN || "7928500614:AAGzmIT44nPYCKvBB7Me9MbDac5v79wSHIU";
-let WEB_APP_URL = process.env.WEB_APP_URL || `https://watertrackerapp.onrender.com/login`
+let WEB_APP_URL;
 
 const bot = new TelegramBot(TOKEN, { polling: true });
 
@@ -55,9 +55,13 @@ bot.onText(/\/start/, async (msg) => {
   WEB_APP_URL = `https://watertrackerapp.onrender.com/login/${chatId}/`
   try {
     bot.sendMessage(chatId, 'Привіт! Я Water Tracker Bot. Я буду нагадувати тобі пити воду щогодини!');
+    bot.sendMessage(chatId, `Перейди до свого профілю тут: [💧 Відкрити Water Tracker](${WEB_APP_URL})`, {
+      parse_mode: 'Markdown',
+  });
   } catch (error) {
     console.error('❌ Помилка реєстрації користувача:', error.message);
     bot.sendMessage(chatId, 'Виникла помилка під час реєстрації. Спробуй ще раз.');
+
   }
 });
 bot.onText(/\/support/, async (msg) => {
@@ -98,18 +102,18 @@ setInterval(async () => {
 
 async function setMenuButton() {
   try {
-    const response = await axios.post(`https://api.telegram.org/bot${TOKEN}/setChatMenuButton`, {
-      menu_button: {
-        type: 'web_app',
-        text: '💧 Track',
-        web_app: {
-          url: WEB_APP_URL
-        }
-      }
-    });
-    console.log('✅ Menu button configured:', response.data);
+      const response = await axios.post(`https://api.telegram.org/bot${TOKEN}/setChatMenuButton`, {
+          menu_button: {
+              type: 'web_app',
+              text: '💧 Track',
+              web_app: {
+                  url: WEB_APP_URL
+              }
+          }
+      });
+      console.log('✅ Menu button configured:', response.data);
   } catch (error) {
-    console.error('❌ Error configuring menu button:', error.message);
+      console.error('❌ Error configuring menu button:', error.message);
   }
 }
 
