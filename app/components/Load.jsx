@@ -8,7 +8,7 @@ export default function Load(){
     <Image src={water} width={150} alt="img"></Image>
     <p className="loadTitle">Drops Water Tracker</p>
     <p className="loadInfo">Stay hydrated and track your daily water intake</p>
-    <div class="points">
+    <div className="points">
         <div></div>
         <div></div>
         <div></div>

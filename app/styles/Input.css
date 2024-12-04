@@ -1,8 +1,12 @@
+.input-wrap {
+  margin: 16px 0;
+}
 input.input-setting {
   background-color: #ffffff;
   padding: 8px;
   border-radius: 8px;
   color: #5E5D5D;
   font-size: 14px;
+  width: 100%;
 }
 .input-desc { font-size: 16px }
