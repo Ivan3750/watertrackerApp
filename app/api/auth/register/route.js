@@ -14,7 +14,9 @@ export async function POST(req) {
       return NextResponse.json({ message: `Username, email, chatId, and password are required, ${chatId}` }, { status: 400 });
     }
 
-    const chatIdNumbers = chatId.match(/\d+/g);
+    const chatIdString = String(chatId); 
+    const chatIdNumbers = chatIdString.match(/\d+/g);
+    
     if (!chatIdNumbers) {
       return NextResponse.json({ message: "Invalid chatId format" }, { status: 400 });
     }
