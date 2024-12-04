@@ -15,11 +15,11 @@ const UserSchema = new mongoose.Schema({
   time: {
     wakeUp: { 
       type: Date, 
-      default: () => setDefaultTime(8, 0) 
+      default: new Date().setHours(8, 0, 0, 0) // Set to 8:00 AM today
     },
     sleepTime: { 
       type: Date, 
-      default: () => setDefaultTime(20, 0) 
+      default: new Date().setHours(20, 0, 0, 0) // Set to 8:00 PM today
     },
   },
   weight: {type: Number, default: 0 },
