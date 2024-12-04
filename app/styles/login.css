@@ -8,6 +8,10 @@
 }
 
 
+.authContainer{
+    padding: 20px;
+}
+
 .inputBox input{
     background-color: transparent;
 }
@@ -35,7 +39,7 @@ line-height: 33px;
 letter-spacing: 0%;
 text-align: left;
 margin-left: 50px;
-margin: 50px;
+margin: 25px;
 }
 
 .btnSubmit{

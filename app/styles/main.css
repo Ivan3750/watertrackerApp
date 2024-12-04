@@ -6,6 +6,16 @@ main{
 
   }
 
+
+
+  @media(max-width: 500px){
+
+    
+    .container{
+      width: 100%!important;
+    }
+  }
+
    
   .footer {
     display: flex;
