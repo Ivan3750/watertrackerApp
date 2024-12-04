@@ -10,6 +10,8 @@
 
 .authContainer{
     padding: 20px;
+    width: 300px;
+    margin: 0px auto;
 }
 
 .inputBox input{
@@ -29,6 +31,7 @@
     align-items: center;
 
 }
+
 
 .loginTitle, .registerTitle{
     color: rgb(48, 48, 48);

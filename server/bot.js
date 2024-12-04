@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
-const TOKEN = process.env.TELEGRAM_BOT_TOKEN || "7928500614:AAGl0v_uidAUp1dGsn98kQTJbFOCDW6ZGVA";
+const TOKEN = process.env.TELEGRAM_BOT_TOKEN || "7928500614:AAGzmIT44nPYCKvBB7Me9MbDac5v79wSHIU";
 let WEB_APP_URL = process.env.WEB_APP_URL || `https://watertrackerapp.onrender.com/login`
 
 const bot = new TelegramBot(TOKEN, { polling: true });

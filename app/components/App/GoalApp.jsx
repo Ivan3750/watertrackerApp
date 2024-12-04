@@ -70,6 +70,7 @@ const GoalApp = ({ userdata }) => {
     <>
       <div className="header">
         <h2 className="header-text">Set Your Goal</h2>
+      </div>
         <div className="goal-display">
           <input
             type="number"
@@ -82,7 +83,6 @@ const GoalApp = ({ userdata }) => {
           />
           <span>ml</span>
         </div>
-      </div>
       <div className="goal-section">
         <h3 className="section-title">Water Goal</h3>
         <p className="description">We prepared a lot of goals for you</p>
