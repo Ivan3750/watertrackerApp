@@ -54,9 +54,18 @@ bot.onText(/\/start/, async (msg) => {
   const chatId = msg.chat.id;
   WEB_APP_URL = `https://watertrackerapp.onrender.com/login/${chatId}/`
   try {
-    bot.sendMessage(chatId, 'Привіт! Я Water Tracker Bot. Я буду нагадувати тобі пити воду щогодини!');
-    bot.sendMessage(chatId, `Перейди до свого профілю тут: [💧 Відкрити Water Tracker](${WEB_APP_URL})`, {
-      parse_mode: 'Markdown',
+/*     bot.sendMessage(chatId, 'Привіт! Я Water Tracker Bot. Я буду нагадувати тобі пити воду щогодини!');
+ */    bot.sendMessage(chatId, 'Привіт! Я Water Tracker Bot. Я буду нагадувати тобі пити воду щогодини!', {
+      reply_markup: {
+          inline_keyboard: [
+              [
+                  {
+                      text: '💧 Відкрити Water Tracker',
+                      web_app: { url: WEB_APP_URL }, // 
+                  },
+              ],
+          ],
+      },
   });
   } catch (error) {
     console.error('❌ Помилка реєстрації користувача:', error.message);
