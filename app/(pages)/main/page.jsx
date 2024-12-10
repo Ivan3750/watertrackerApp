@@ -9,51 +9,44 @@ import ProfileApp from "@/app/components/App/ProfileApp";
 import SettingsApp from "@/app/components/App/SettingsApp";
 import Load from "@/app/components/Load";
 import "@/app/styles/home.css";
-import { useEffect, useState } from "react";
-import GetUserData from "@/app/lib/GET"
 import "@/app/styles/main.css";
+import { useEffect, useState } from "react";
 
 const Main = () => {
   const [page, setPage] = useState("load");
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Fetch user data
+  const fetchUserData = async () => {
+    try {
+      const response = await fetch("/api/profil", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${localStorage.token}`,
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch user data");
+      }
+
+      const data = await response.json();
+      setUser(data);
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   useEffect(() => {
-    fetch("/api/profil", {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${localStorage.token}`,
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setUser(data);
-        setTimeout(() => {
-          setPage("home");
-        }, 500);
-      })
-      .catch((error) => console.error(error));
+    fetchUserData();
   }, []);
-  useEffect(() => {
-    fetch("/api/profil", {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${localStorage.token}`,
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setUser(data);
-        
-      })
-      .catch((error) => console.error(error));
-  }, [page]);
 
-
-
-  
-
-  const renderPage =  () => {
-    switch (page) { 
+  // Render pages dynamically
+  const renderPage = () => {
+    switch (page) {
       case "home":
         return <HomeApp linkFunc={setPage} userdata={user} />;
       case "analysis":
@@ -66,20 +59,18 @@ const Main = () => {
         return <SettingsApp userdata={user} />;
       case "profile":
         return <ProfileApp userdata={user} />;
-      case "load":
-        return <Load userdata={user} />;
       default:
         return <div>Page not found</div>;
     }
-    
   };
 
-
-  if (page === "load") {
-    return (<div className="container-load">
-        <Load userdata={user} />
-        
-        </div>)
+  // Handle loading state
+  if (isLoading) {
+    return (
+      <div className="container-load">
+        <Load />
+      </div>
+    );
   }
 
   return (
@@ -88,7 +79,6 @@ const Main = () => {
       <FooterApp linkFunc={setPage} />
     </div>
   );
-
 };
 
 export default Main;
